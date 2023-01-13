@@ -1,0 +1,426 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		EEE4805D280A05AB4D327941 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEE4896233DC133CF15A90DC /* LoginViewController.swift */; };
+		EEE482047DB06E23E8A110C5 /* LoginScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEE4881C12DEA017BA91CDB4 /* LoginScreenView.swift */; };
+		EEE4828D455CE61B398327DF /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEE4812ACD89A0BC0547E98E /* BaseView.swift */; };
+		EEE4840EB470121FE059929E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EEE48690066D73C9E4D1AAD0 /* Assets.xcassets */; };
+		EEE485A23C0829ADB228D21F /* LoginFormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEE4894DEB4503FC5112CBD1 /* LoginFormView.swift */; };
+		EEE485ED0219DF56FE976E33 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEE48D2CFDE8DD03CE9B0013 /* UIView+Extension.swift */; };
+		EEE4868B1F4AF0A5A3464EC6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEE48D4003F2891CE216ABAC /* AppDelegate.swift */; };
+		EEE4892C99279E70A00E1433 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEE48DC84C969E376046C8AC /* BaseViewController.swift */; };
+		EEE48A0B35F4133CC8064C6E /* SignUpScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEE48277A0F3AB0157B38700 /* SignUpScreenView.swift */; };
+		EEE48EC958750653728CB813 /* BaseTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEE48F62189F01C4EB1C7146 /* BaseTextField.swift */; };
+		EEE48F92F1B39837FBFED5B7 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEE48D145546AC0E66604B8C /* SignUpViewController.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		EEE4812ACD89A0BC0547E98E /* BaseView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
+		EEE48277A0F3AB0157B38700 /* SignUpScreenView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpScreenView.swift; sourceTree = "<group>"; };
+		EEE485EC98497D77CFDBE485 /* Schooling.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Schooling.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		EEE48690066D73C9E4D1AAD0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		EEE4881C12DEA017BA91CDB4 /* LoginScreenView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginScreenView.swift; sourceTree = "<group>"; };
+		EEE4894DEB4503FC5112CBD1 /* LoginFormView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginFormView.swift; sourceTree = "<group>"; };
+		EEE4896233DC133CF15A90DC /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		EEE48D145546AC0E66604B8C /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		EEE48D2CFDE8DD03CE9B0013 /* UIView+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
+		EEE48D4003F2891CE216ABAC /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		EEE48DC84C969E376046C8AC /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		EEE48F23458E9484D2BEE47F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.info; path = Info.plist; sourceTree = "<group>"; };
+		EEE48F62189F01C4EB1C7146 /* BaseTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseTextField.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		EEE48EF2075B935FA3DC05CF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		EEE481059E3F398CF59342EA /* SignUp */ = {
+			isa = PBXGroup;
+			children = (
+				EEE48277A0F3AB0157B38700 /* SignUpScreenView.swift */,
+			);
+			path = SignUp;
+			sourceTree = "<group>";
+		};
+		EEE48157E6F478FE731CB071 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				EEE48690066D73C9E4D1AAD0 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		EEE482240D304C894C3B4C94 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EEE485EC98497D77CFDBE485 /* Schooling.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		EEE48322EB1E1240CA32D122 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				EEE4894DEB4503FC5112CBD1 /* LoginFormView.swift */,
+				EEE4881C12DEA017BA91CDB4 /* LoginScreenView.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		EEE48515A409B3C49C564FD8 /* Delegate */ = {
+			isa = PBXGroup;
+			children = (
+				EEE48D4003F2891CE216ABAC /* AppDelegate.swift */,
+			);
+			path = Delegate;
+			sourceTree = "<group>";
+		};
+		EEE485E67572B2935EF1045A /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				EEE4896233DC133CF15A90DC /* LoginViewController.swift */,
+				EEE48D145546AC0E66604B8C /* SignUpViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		EEE4877914AF2921726EB1AF /* Schooling */ = {
+			isa = PBXGroup;
+			children = (
+				EEE48F23458E9484D2BEE47F /* Info.plist */,
+				EEE488ED2881A08E4EC438A0 /* View */,
+				EEE48CA690F2F8FCBEED9D6C /* Model */,
+				EEE48CAD5E61E79529337405 /* ViewModel */,
+				EEE48157E6F478FE731CB071 /* Resources */,
+				EEE48515A409B3C49C564FD8 /* Delegate */,
+				EEE48AEC77340961053E9BBA /* Utils */,
+			);
+			path = Schooling;
+			sourceTree = "<group>";
+		};
+		EEE488ED2881A08E4EC438A0 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				EEE485E67572B2935EF1045A /* Controller */,
+				EEE48E665A1478FAF40D0C2E /* Base */,
+				EEE48322EB1E1240CA32D122 /* Login */,
+				EEE481059E3F398CF59342EA /* SignUp */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		EEE48AEC77340961053E9BBA /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				EEE48D2CFDE8DD03CE9B0013 /* UIView+Extension.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		EEE48CA690F2F8FCBEED9D6C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		EEE48CAD5E61E79529337405 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		EEE48E665A1478FAF40D0C2E /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				EEE4812ACD89A0BC0547E98E /* BaseView.swift */,
+				EEE48DC84C969E376046C8AC /* BaseViewController.swift */,
+				EEE48F62189F01C4EB1C7146 /* BaseTextField.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		EEE48F9E63D1F55DBFE72E57 = {
+			isa = PBXGroup;
+			children = (
+				EEE482240D304C894C3B4C94 /* Products */,
+				EEE4877914AF2921726EB1AF /* Schooling */,
+			);
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		EEE488FF5E9C8D600A93102A /* Schooling */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EEE483F44CF701BF0F24FBB5 /* Build configuration list for PBXNativeTarget "Schooling" */;
+			buildPhases = (
+				EEE486AF80050887B7002FB5 /* Sources */,
+				EEE48EF2075B935FA3DC05CF /* Frameworks */,
+				EEE4801D00884036EDDDDAB7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Schooling;
+			productName = Schooling;
+			productReference = EEE485EC98497D77CFDBE485 /* Schooling.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		EEE487584C943D6ABBE79F1D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+			};
+			buildConfigurationList = EEE488A11AA64D45B5723D28 /* Build configuration list for PBXProject "Schooling" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				English,
+				en,
+				Base,
+			);
+			mainGroup = EEE48F9E63D1F55DBFE72E57;
+			productRefGroup = EEE482240D304C894C3B4C94 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				EEE488FF5E9C8D600A93102A /* Schooling */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		EEE4801D00884036EDDDDAB7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EEE4840EB470121FE059929E /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		EEE486AF80050887B7002FB5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EEE4868B1F4AF0A5A3464EC6 /* AppDelegate.swift in Sources */,
+				EEE4805D280A05AB4D327941 /* LoginViewController.swift in Sources */,
+				EEE4828D455CE61B398327DF /* BaseView.swift in Sources */,
+				EEE4892C99279E70A00E1433 /* BaseViewController.swift in Sources */,
+				EEE48EC958750653728CB813 /* BaseTextField.swift in Sources */,
+				EEE485ED0219DF56FE976E33 /* UIView+Extension.swift in Sources */,
+				EEE485A23C0829ADB228D21F /* LoginFormView.swift in Sources */,
+				EEE482047DB06E23E8A110C5 /* LoginScreenView.swift in Sources */,
+				EEE48F92F1B39837FBFED5B7 /* SignUpViewController.swift in Sources */,
+				EEE48A0B35F4133CC8064C6E /* SignUpScreenView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		EEE4817A25DD0730E66F5879 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Schooling/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = "";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.kayky.Schooling;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		EEE481C1652B50AB7AFA123F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		EEE4832C0FB1299527074DA5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Schooling/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = "";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.kayky.Schooling;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		EEE48BF6F0184B4EB722C043 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		EEE483F44CF701BF0F24FBB5 /* Build configuration list for PBXNativeTarget "Schooling" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EEE4817A25DD0730E66F5879 /* Debug */,
+				EEE4832C0FB1299527074DA5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EEE488A11AA64D45B5723D28 /* Build configuration list for PBXProject "Schooling" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EEE481C1652B50AB7AFA123F /* Debug */,
+				EEE48BF6F0184B4EB722C043 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = EEE487584C943D6ABBE79F1D /* Project object */;
+}
