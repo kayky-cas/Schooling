@@ -20,5 +20,13 @@ class LoginViewController: BaseViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        loginScreenView.signUpTouchUpInsideAction = navigateToSignUp
+    }
+
+    func navigateToSignUp() {
+        let signUpViewController = SignUpViewController()
+
+        navigationController?.pushViewController(signUpViewController, animated: true)
     }
 }

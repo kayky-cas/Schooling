@@ -4,7 +4,10 @@
 
 import UIKit
 
-class LoginScreenView: BaseView {
+class LoginScreenView: BaseScreenView {
+    var signUpTouchUpInsideAction: () -> Void = {
+    }
+
     lazy var logoImage: UIImageView = {
         let uiImageView = UIImageView()
 
@@ -14,13 +17,7 @@ class LoginScreenView: BaseView {
         return uiImageView
     }()
 
-    lazy var loginFormView: LoginFormView = {
-        let loginFormView = LoginFormView()
-
-        loginFormView.setup()
-
-        return loginFormView
-    }()
+    lazy var loginFormView = LoginFormView()
 
     lazy var forgotPasswordLabel: UILabel = {
         let uiLabel = UILabel()
@@ -70,10 +67,10 @@ class LoginScreenView: BaseView {
 
         uiLabel.numberOfLines = 0
 
-//        let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(signUpTouchUpInside))
-//
-//        uiLabel.addGestureRecognizer(tapGestureRecognizer)
-//        uiLabel.isUserInteractionEnabled = true
+        let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(signUpTouchUpInside))
+
+        uiLabel.addGestureRecognizer(tapGestureRecognizer)
+        uiLabel.isUserInteractionEnabled = true
 
         uiLabel.textAlignment = .justified
 
@@ -114,21 +111,22 @@ class LoginScreenView: BaseView {
 
         let padding = 30.0
 
-        loginFormView.anchor(
+        loginFormView.anchorBaseView(
                 top: logoImage.bottomAnchor,
                 leading: safeAreaLayoutGuide.leadingAnchor,
-                bottom: loginButton.topAnchor,
                 trailing: safeAreaLayoutGuide.trailingAnchor,
                 padding: .init(top: 50, left: padding, bottom: 0, right: padding)
         )
 
-        loginFormView.setupConstraints()
-
         forgotPasswordLabel.anchor(
-                top: loginFormView.passwordTextField.bottomAnchor,
+                top: loginFormView.bottomAnchor,
                 leading: loginFormView.leadingAnchor,
                 trailing: loginFormView.trailingAnchor,
                 padding: .init(top: 5, left: 0, bottom: 0, right: 0)
         )
+    }
+
+    @objc func signUpTouchUpInside() {
+        signUpTouchUpInsideAction()
     }
 }

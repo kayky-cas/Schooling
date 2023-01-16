@@ -11,7 +11,7 @@ class BaseViewController: UIViewController {
 
         view.backgroundColor = .systemBackground
 
-        if let view = view as? BaseView {
+        if let view = view as? BaseScreenView {
             view.setup()
         }
     }
@@ -19,7 +19,7 @@ class BaseViewController: UIViewController {
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
 
-        if let view = view as? BaseView {
+        if let view = view as? BaseScreenView {
             view.setupConstraints()
         }
     }
