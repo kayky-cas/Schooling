@@ -6,6 +6,8 @@ import Foundation
 
 struct Grade {
     let id: UUID
+
+    let name: String
     let value: Double
 
     let user_id: UUID

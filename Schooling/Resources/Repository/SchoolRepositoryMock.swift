@@ -7,6 +7,9 @@ import Foundation
 class SchoolRepositoryMock {
     static let shared = SchoolRepositoryMock()
 
+    private init() {
+    }
+
     var schools: [School] = [
         .init(name: "PUCRS", domain: "pucrs"),
         .init(name: "Zallpy Academy", domain: "zallpy")

@@ -14,6 +14,7 @@ class LoginFormView: BaseView {
 
         baseTextView.placeholder = "Endereço de Email"
         baseTextView.keyboardType = .emailAddress
+        baseTextView.autocapitalizationType = .none
 
         baseTextView.addTarget(self, action: #selector(textFieldChange), for: .editingChanged)
 

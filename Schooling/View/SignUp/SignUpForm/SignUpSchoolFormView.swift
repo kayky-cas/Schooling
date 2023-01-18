@@ -10,14 +10,14 @@ class SignUpSchoolFormView: BaseView {
     var inputChange: () -> Void = {
     }
 
-    lazy var schoolLabel: UILabel = {
-        let uiLabel = UILabel()
-
-        uiLabel.text = "Nome da Escola: "
-        uiLabel.textColor = .gray
-
-        return uiLabel
-    }()
+//    lazy var schoolLabel: UILabel = {
+//        let uiLabel = UILabel()
+//
+//        uiLabel.text = "Nome da Escola: "
+//        uiLabel.textColor = .systemGray3
+//
+//        return uiLabel
+//    }()
 
     lazy var schoolOptionButton: UIButton = {
         let uiButton = UIButton(configuration: .borderless())
@@ -28,26 +28,83 @@ class SignUpSchoolFormView: BaseView {
         return uiButton
     }()
 
+    lazy var roleSwitch: UISwitch = {
+        let uiSwitch = UISwitch()
+
+        uiSwitch.onTintColor = TEACHER_COLOR
+        uiSwitch.subviews[0].subviews[0].backgroundColor = STUDENT_COLOR
+        uiSwitch.addTarget(self, action: #selector(switchValueDidChange), for: .valueChanged)
+
+        uiSwitch.isOn = UIColor.tintColor.accessibilityName == TEACHER_COLOR.accessibilityName
+
+        return uiSwitch
+    }()
+
+    lazy var studentLabel: UILabel = {
+        let uiLabel = UILabel()
+
+        uiLabel.text = "Aluno"
+        uiLabel.textColor = STUDENT_COLOR
+
+        return uiLabel
+    }()
+
+    lazy var teacherLabel: UILabel = {
+        let uiLabel = UILabel()
+
+        uiLabel.text = "Professor"
+        uiLabel.textColor = TEACHER_COLOR
+
+        return uiLabel
+    }()
+
     override func setup() {
 
         addSubviews(
-                schoolLabel,
-                schoolOptionButton
+//                schoolLabel,
+                schoolOptionButton,
+                studentLabel,
+                teacherLabel,
+                roleSwitch
         )
     }
 
     override func setupConstraints() {
         schoolOptionButton.anchor(
                 top: topAnchor
+//                padding: .init(top: 0, left: 0, bottom: 0, right: 0
         )
 
-        schoolLabel.anchor(
-                leading: leadingAnchor
+        schoolOptionButton.anchorCenterX(to: centerXAnchor)
+
+//        schoolLabel.anchor(
+//                leading: leadingAnchor
+//        )
+//
+//        schoolLabel.anchorCenterY(to: schoolOptionButton.centerYAnchor)
+
+//        schoolOptionButton.leadingAnchor.constraint(equalTo: schoolLabel.trailingAnchor).isActive = true
+
+        roleSwitch.anchor(
+                top: schoolOptionButton.bottomAnchor,
+                padding: .init(top: 15, left: 0, bottom: 0, right: 0)
         )
 
-        schoolLabel.anchorCenterY(to: schoolOptionButton.centerYAnchor)
+        roleSwitch.anchorCenterX(to: centerXAnchor)
 
-        schoolOptionButton.leadingAnchor.constraint(equalTo: schoolLabel.trailingAnchor).isActive = true
+        studentLabel.anchorCenterY(to: roleSwitch.centerYAnchor)
+
+        studentLabel.anchor(
+                trailing: roleSwitch.leadingAnchor,
+                padding: .init(top: 0, left: 0, bottom: 0, right: 15)
+        )
+
+        teacherLabel.anchorCenterY(to: roleSwitch.centerYAnchor)
+
+        teacherLabel.anchor(
+                leading: roleSwitch.trailingAnchor,
+                padding: .init(top: 0, left: 15, bottom: 0, right: 0)
+        )
     }
 
     func setSchools(schools: [String]) {
@@ -58,5 +115,10 @@ class SignUpSchoolFormView: BaseView {
                 self.inputChange()
             }
         }))
+    }
+
+    @objc func switchValueDidChange() {
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        appDelegate.window!.tintColor = roleSwitch.isOn ? TEACHER_COLOR : STUDENT_COLOR
     }
 }

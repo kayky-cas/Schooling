@@ -8,6 +8,9 @@ class LoginScreenView: BaseScreenView {
     var signUpTouchUpInsideAction: () -> Void = {
     }
 
+    var loginTouchUpInsideAction: () -> Void = {
+    }
+
     lazy var logoImage: UIImageView = {
         let uiImageView = UIImageView()
 
@@ -34,6 +37,7 @@ class LoginScreenView: BaseScreenView {
 
         uiButton.setTitle("Entrar", for: .normal)
         uiButton.isEnabled = false
+        uiButton.addTarget(self, action: #selector(loginTouchUpInside), for: .touchUpInside)
 
         return uiButton
     }()
@@ -126,7 +130,15 @@ class LoginScreenView: BaseScreenView {
         )
     }
 
+    func getLogin() -> (String, String) {
+        (loginFormView.emailTextField.text!, loginFormView.passwordTextField.text!)
+    }
+
     @objc func signUpTouchUpInside() {
         signUpTouchUpInsideAction()
+    }
+
+    @objc func loginTouchUpInside() {
+        loginTouchUpInsideAction()
     }
 }

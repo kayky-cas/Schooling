@@ -20,6 +20,15 @@ class SignUpFormView: BaseView {
 
     lazy var signUpUserFormView = SignUpUserFormView()
 
+    lazy var schoolLabel: UILabel = {
+        let uiLabel = UILabel()
+
+        uiLabel.text = "Informações da Escola"
+        uiLabel.textColor = .systemGray2
+
+        return uiLabel
+    }()
+
     lazy var signUpSchoolFormView = SignUpSchoolFormView()
 
     lazy var loginLabel: UILabel = {
@@ -46,6 +55,7 @@ class SignUpFormView: BaseView {
         addSubviews(
                 userLabel,
                 signUpUserFormView,
+                schoolLabel,
                 signUpSchoolFormView,
                 loginLabel,
                 signUpLoginFormView
@@ -57,10 +67,16 @@ class SignUpFormView: BaseView {
     }
 
     override func setupConstraints() {
-        signUpSchoolFormView.anchorBaseView(
+        schoolLabel.anchor(
                 top: topAnchor,
+                padding: .init(top: 0, left: 0, bottom: 0, right: 0)
+        )
+
+        signUpSchoolFormView.anchorBaseView(
+                top: schoolLabel.bottomAnchor,
                 leading: leadingAnchor,
-                trailing: trailingAnchor
+                trailing: trailingAnchor,
+                padding: .init(top: 5, left: 0, bottom: 0, right: 0)
         )
 
         userLabel.anchor(
@@ -74,7 +90,6 @@ class SignUpFormView: BaseView {
                 trailing: trailingAnchor,
                 padding: .init(top: 5, left: 0, bottom: 0, right: 0)
         )
-
 
         loginLabel.anchor(
                 top: signUpUserFormView.bottomAnchor,
