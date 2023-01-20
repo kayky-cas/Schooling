@@ -20,14 +20,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 //        let rootViewController = HomeViewController(
 //
 
-        AuthProvider.shared.setUser(user: UserRepositoryMock.shared.users[1])
+//        AuthProvider.shared.setUser(user: UserRepositoryMock.shared.users[5])
+        AuthProvider.shared.setUser(user: UserRepositoryMock.shared.users[5])
 
         let navigationController = UINavigationController(rootViewController: rootViewController)
 
         window = UIWindow(frame: UIScreen.main.bounds)
         window?.tintColor = STUDENT_COLOR
 //        window?.rootViewController = navigationController
-        window?.rootViewController = BaseTapViewController()
+        window?.rootViewController = BaseTabViewController()
         window?.makeKeyAndVisible()
 
         // Override point for customization after application launch.

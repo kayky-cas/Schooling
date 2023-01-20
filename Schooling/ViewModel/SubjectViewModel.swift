@@ -9,7 +9,7 @@ class SubjectViewModel {
     let subjectRepository = SubjectRepositoryMock.shared
 
     func getUserSubjectAverageGrades(userId: UUID, completion: @escaping ([(Subject, [Grade])]) -> Void) {
-        gradeRepository.getSubjects { grades in
+        gradeRepository.getGrades { grades in
             self.subjectRepository.getSubjects { subjects in
 
                 let grades = subjects.map { subject in

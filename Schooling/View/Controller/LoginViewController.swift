@@ -47,7 +47,7 @@ class LoginViewController: BaseViewController {
     func verifyLoggedUser() {
         if authProvider.isLogged() {
             let appDelegate = UIApplication.shared.delegate as! AppDelegate
-            appDelegate.window?.rootViewController = BaseTapViewController()
+            appDelegate.window?.rootViewController = BaseTabViewController()
         }
     }
 

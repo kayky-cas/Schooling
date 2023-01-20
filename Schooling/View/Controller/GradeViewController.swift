@@ -5,6 +5,13 @@
 import UIKit
 
 class GradeViewController: BaseViewController {
+    var updateTable: () -> Void = {
+    }
+
+    let authProvider = AuthProvider.shared
+    let studentViewModel = StudentViewModel()
+    let gradeViewModel = GradeViewModel()
+
     let gradeScreenView = GradeScreenView()
 
     var grades: [Grade] = []
@@ -21,12 +28,38 @@ class GradeViewController: BaseViewController {
         gradeScreenView.gradeTableView.delegate = self
         gradeScreenView.gradeTableView.dataSource = self
         gradeScreenView.gradeTableView.register(TextNumberTableViewCell.self, forCellReuseIdentifier: gradeScreenView.gradeTableView.cellId)
+
+        gradeScreenView.user = authProvider.getUser()
+
+
     }
 
-    func setContent(subject: Subject, grades: [Grade]) {
-        gradeScreenView.subject = subject
+
+    func setContent(subject: String, grades: [Grade], userId: UUID? = nil) {
+        gradeScreenView.title = subject
         gradeScreenView.grades = grades
 
+        gradeScreenView.addGrade = { grade in
+            let alert = LoadingAlert(title: nil, message: "Adicionando...", preferredStyle: .alert)
+            self.present(alert, animated: true)
+
+            self.studentViewModel.getSubjectById(subjectId: self.authProvider.getUser()?.subject_id ?? .init()) { subject in
+                if let subject = subject {
+                    var grade = grade
+                    grade.subject_id = subject.id
+                    grade.user_id = userId
+
+                    self.gradeViewModel.addGrade(grade: grade) {
+                        alert.dismiss(animated: true)
+                        self.grades.append(grade)
+                        self.gradeScreenView.gradeTableView.reloadData()
+                        self.updateTable()
+                    }
+                } else {
+                    alert.dismiss(animated: true)
+                }
+            }
+        }
 
         self.grades = grades
         gradeScreenView.gradeTableView.reloadData()

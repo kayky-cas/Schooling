@@ -10,6 +10,16 @@ struct Grade {
     let name: String
     let value: Double
 
-    let user_id: UUID
-    let subject_id: UUID
+    var user_id: UUID?
+    var subject_id: UUID?
+
+    init(name: String, value: Double) {
+        id = .init()
+
+        self.name = name
+        self.value = value
+
+        user_id = nil
+        subject_id = nil
+    }
 }

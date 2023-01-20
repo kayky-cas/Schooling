@@ -94,6 +94,33 @@ extension StudentViewController: UITableViewDelegate, UITableViewDataSource {
     }
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let gradeViewController = GradeViewController()
+
+        let (user, grades) = students[indexPath.item]
+
+        gradeViewController.setContent(subject: user.name, grades: grades, userId: user.id)
+
+        gradeViewController.updateTable = {
+            self.studentViewModel.getSubjectAverageGrades(subjectId: self.authProvider.getUser()!.subject_id!) {
+                self.students = $0.sorted { tuple, tuple2 in
+                    tuple.0.name > tuple2.0.name
+                }
+
+                self.studentViewModel.getSubjectById(subjectId: self.authProvider.getUser()!.subject_id!) {
+                    if let subject = $0 {
+                        self.subjectName = subject.name
+                    }
+
+                    self.subjectTableView.reloadData()
+                }
+            }
+        }
+
+        if let presentationController = gradeViewController.presentationController as? UISheetPresentationController {
+            presentationController.detents = [.medium(), .large()]
+        }
+
+        present(gradeViewController, animated: true)
     }
 
     public func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {

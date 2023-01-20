@@ -82,7 +82,7 @@ extension SubjectViewController: UITableViewDelegate, UITableViewDataSource {
 
         let (subject, grades) = subjects[indexPath.item]
 
-        gradeViewController.setContent(subject: subject, grades: grades)
+        gradeViewController.setContent(subject: subject.name, grades: grades)
 
         if let presentationController = gradeViewController.presentationController as? UISheetPresentationController {
             presentationController.detents = [.medium(), .large()]

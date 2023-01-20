@@ -18,12 +18,12 @@ class StudentViewModel {
     }
 
     func getSubjectAverageGrades(subjectId: UUID, completion: @escaping ([(User, [Grade])]) -> Void) {
-        gradeRepository.getSubjects { grades in
+        gradeRepository.getGrades { grades in
 
             self.userRepository.getUsers { users in
 
                 let grades = users.filter {
-                            $0.role == .student
+                            $0.role == .student && $0.is_open
                         }
                         .map { user in
                             let subGrades = grades.filter {

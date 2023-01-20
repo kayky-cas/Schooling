@@ -18,7 +18,9 @@ struct User {
 
     var school_id: UUID?
 
-    let is_open: Bool
+    var is_open: Bool
+
+    let register_date: Date
 
     init(name: String, cpf: String, username: String, password: String, role: Role) {
         id = .init()
@@ -29,6 +31,7 @@ struct User {
         self.role = role
         school_id = nil
         is_open = false
+        register_date = Date()
     }
 
     init(id: UUID, name: String, cpf: String, username: String, password: String, role: Role, is_open: Bool) {
@@ -40,6 +43,7 @@ struct User {
         self.role = role
         school_id = nil
         self.is_open = is_open
+        register_date = Date()
     }
 }
 

@@ -4,7 +4,7 @@
 
 import UIKit
 
-class BaseTapViewController: UITabBarController {
+class BaseTabViewController: UITabBarController {
     let authProvider = AuthProvider.shared
 
     override func viewDidLoad() {
@@ -15,7 +15,7 @@ class BaseTapViewController: UITabBarController {
         tabBar.backgroundColor = .secondarySystemBackground
 
         viewControllers = [
-            generateNavController(controller: ProfileViewController(), title: "Profile", image: UIImage(systemName: "person.fill"))
+            generateNavController(controller: ProfileViewController(), title: "Perfil", image: UIImage(systemName: "person.fill"))
         ]
 
         getViewController()
@@ -32,7 +32,7 @@ class BaseTapViewController: UITabBarController {
                 viewControllers?.append(generateNavController(controller: StudentViewController(), title: "Alunos", image: UIImage(systemName: "pencil")))
                 break
             case .admin:
-                viewControllers?.append(generateNavController(controller: SubjectViewController(), title: "Aprovar", image: UIImage(systemName: "checkmark")))
+                viewControllers?.append(generateNavController(controller: ApproveViewController(), title: "Aprovar", image: UIImage(systemName: "checkmark")))
                 viewControllers?.append(generateNavController(controller: SubjectViewController(), title: "Escolas", image: UIImage(systemName: "building.2.fill")))
                 break
             }

@@ -66,10 +66,10 @@ class ProfileScreenView: BaseScreenView {
     override func setupConstraints() {
         nameLabel.anchor(
                 top: safeAreaLayoutGuide.topAnchor,
-                padding: .init(top: 30, left: 0, bottom: 0, right: 0)
+                leading: safeAreaLayoutGuide.leadingAnchor,
+                trailing: safeAreaLayoutGuide.trailingAnchor,
+                padding: .init(top: 30, left: 20, bottom: 0, right: 20)
         )
-
-        nameLabel.anchorCenterX(to: safeAreaLayoutGuide.centerXAnchor)
 
         roleLabel.anchor(
                 top: nameLabel.bottomAnchor,

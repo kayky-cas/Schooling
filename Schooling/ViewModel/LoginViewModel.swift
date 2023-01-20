@@ -17,7 +17,7 @@ class LoginViewModel {
 
         repository.getUsers {
             completion($0.first(where: {
-                $0.username == username && $0.password == password
+                $0.username == username && $0.password == password && $0.is_open
             }))
         }
     }
