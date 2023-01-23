@@ -18,17 +18,31 @@ class SignUpViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        loadSchools()
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        if appDelegate.window?.tintColor.accessibilityName == ADMIN_COLOR.accessibilityName {
+            appDelegate.window?.tintColor = STUDENT_COLOR
+        }
+
+        signUpScreenView.createUser = createUser
+
+        loadOptionals()
     }
 
-    func loadSchools() {
+    func loadOptionals() {
         let alert = LoadingAlert(title: nil, message: "Carregando...", preferredStyle: .alert)
 
         present(alert, animated: true)
 
-        signUpViewModel.getSchoolsName {
+        signUpViewModel.getSchoolsAndSubjects {
             self.signUpScreenView.schools = $0
+            self.signUpScreenView.subjects = $1
             alert.dismiss(animated: true)
+        }
+    }
+
+    func createUser(user: User) {
+        signUpViewModel.addUser(user: user) {
+            self.navigationController?.popToRootViewController(animated: true)
         }
     }
 }

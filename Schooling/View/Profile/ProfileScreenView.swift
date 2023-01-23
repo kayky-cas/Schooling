@@ -5,6 +5,9 @@
 import UIKit
 
 class ProfileScreenView: BaseScreenView {
+    var logout: () -> Void = {
+    }
+
     var user: User? {
         didSet {
             if let user = user {
@@ -55,11 +58,23 @@ class ProfileScreenView: BaseScreenView {
         return uiLabel
     }()
 
+    lazy var logoutButton: UIButton = {
+        let uiButton = UIButton(configuration: .filled())
+
+        uiButton.setTitle("Sair", for: .normal)
+        uiButton.tintColor = .red
+
+        uiButton.addTarget(self, action: #selector(touchUpInside), for: .touchUpInside)
+
+        return uiButton
+    }()
+
     override func setup() {
         addSubviews(
                 nameLabel,
                 roleLabel,
-                cpfLabel
+                cpfLabel,
+                logoutButton
         )
     }
 
@@ -75,9 +90,22 @@ class ProfileScreenView: BaseScreenView {
                 top: nameLabel.bottomAnchor,
                 leading: nameLabel.leadingAnchor
         )
+
         cpfLabel.anchor(
                 top: nameLabel.bottomAnchor,
                 trailing: nameLabel.trailingAnchor
         )
+
+        logoutButton.anchor(
+                bottom: safeAreaLayoutGuide.bottomAnchor,
+                padding: .init(top: 0, left: 0, bottom: 20, right: 0),
+                size: .init(width: 120, height: 0)
+        )
+
+        logoutButton.anchorCenterX(to: centerXAnchor)
+    }
+
+    @objc func touchUpInside() {
+        logout()
     }
 }

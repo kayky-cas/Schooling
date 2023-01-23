@@ -42,7 +42,7 @@ class SignUpFormView: BaseView {
 
     lazy var signUpLoginFormView = SignUpLoginFormView()
 
-    var schools: [String]? {
+    var schools: [School]? {
         didSet {
             if let schools = schools {
                 signUpSchoolFormView.setSchools(schools: schools)
@@ -50,6 +50,13 @@ class SignUpFormView: BaseView {
         }
     }
 
+    var subjects: [Subject]? {
+        didSet {
+            if let subjects = subjects {
+                signUpSchoolFormView.setSubjects(subjects: subjects)
+            }
+        }
+    }
 
     override func setup() {
         addSubviews(
@@ -63,6 +70,9 @@ class SignUpFormView: BaseView {
 
         signUpLoginFormView.inputChange = inputChange
         signUpSchoolFormView.inputChange = inputChange
+        signUpSchoolFormView.changeSchool = {
+            self.signUpLoginFormView.domain = $0.domain
+        }
         signUpUserFormView.inputChange = inputChange
     }
 

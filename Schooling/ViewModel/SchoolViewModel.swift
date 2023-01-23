@@ -7,11 +7,13 @@ import Foundation
 class SchoolViewModel {
     let schoolRepository = SchoolRepositoryMock.shared
 
-    func getSchoolsName(completion: @escaping ([String]) -> Void) {
+    func getSchools(completion: @escaping ([School]) -> Void) {
         schoolRepository.getSchools { schools in
-            completion(schools.map {
-                $0.name
-            })
+            completion(schools)
         }
+    }
+
+    func addSchools(school: School, completion: @escaping () -> Void) {
+        schoolRepository.addSchools(school: school, completion: completion)
     }
 }

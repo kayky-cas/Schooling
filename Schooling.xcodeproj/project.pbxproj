@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		4D39EE0F2976CC34004B1190 /* Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4D39EE0E2976CC34004B1190 /* Storyboard.storyboard */; };
 		EEE4805D280A05AB4D327941 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEE4896233DC133CF15A90DC /* LoginViewController.swift */; };
+		EEE48075EB202E5D0B677F54 /* SchoolFormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEE48917EBB731BD656DC2FE /* SchoolFormView.swift */; };
 		EEE480E16F85716F2236D436 /* SubjectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEE487C2031D14E49CF6F79D /* SubjectViewController.swift */; };
 		EEE481187C2B98B1651F649F /* ApproveTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEE48177D046255812CFB0B0 /* ApproveTableViewCell.swift */; };
 		EEE4813F47626A9B5D7B6DAF /* Grade.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEE482F93670317FDF432196 /* Grade.swift */; };
@@ -23,7 +24,9 @@
 		EEE483626F1CF51258E624E1 /* SignUpFormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEE488356110BCCA5BA16310 /* SignUpFormView.swift */; };
 		EEE48376800F7FFDEA418AEB /* SubjectViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEE481E31F54240B242AB14A /* SubjectViewModel.swift */; };
 		EEE4840EB470121FE059929E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EEE48690066D73C9E4D1AAD0 /* Assets.xcassets */; };
+		EEE48447B48A3C844F7AC40B /* SchoolTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEE4882D47DBC8C00148E462 /* SchoolTableViewCell.swift */; };
 		EEE484668E69D6A64E2684F4 /* SchoolRepositoryMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEE48F29E64BA4E4B115C3D3 /* SchoolRepositoryMock.swift */; };
+		EEE484B8A8AF44B3C41070D6 /* SchoolScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEE48327BFE7A14054182A46 /* SchoolScreenView.swift */; };
 		EEE484FA924D709DFA1B9BE8 /* ApproveViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEE4896924959F8BA48EBCF8 /* ApproveViewModel.swift */; };
 		EEE4852E7FA12CBD2F768898 /* AuthProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEE487A8C4C6CAD7675D0AF3 /* AuthProvider.swift */; };
 		EEE4856D2F39E81D8B7B7861 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEE48DD87B6DB6E51D292787 /* LoginViewModel.swift */; };
@@ -42,6 +45,7 @@
 		EEE488021BF37A5D0E87DD80 /* GradeTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEE48C0B659E76FCAC4801C6 /* GradeTableView.swift */; };
 		EEE4881B38334B17A9376101 /* LoadingAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEE484C575EE6953380A3579 /* LoadingAlert.swift */; };
 		EEE4881C438EAA3F4858B23E /* StudentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEE48B3E2FBEDE6E4A232EBA /* StudentViewController.swift */; };
+		EEE4885FCAC8E0B5F658A7FE /* BaseNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEE48912539B80E0FEC448AB /* BaseNavigationController.swift */; };
 		EEE488B49439CD747B549BA6 /* GradeRepositoryMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEE48CB9D3D94B549092216E /* GradeRepositoryMock.swift */; };
 		EEE4892C99279E70A00E1433 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEE48DC84C969E376046C8AC /* BaseViewController.swift */; };
 		EEE48A0B35F4133CC8064C6E /* SignUpScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEE48277A0F3AB0157B38700 /* SignUpScreenView.swift */; };
@@ -55,6 +59,7 @@
 		EEE48DD6756CFD1015C9D654 /* Subject.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEE481BA9FB39F1C0D6DBB17 /* Subject.swift */; };
 		EEE48E13D7E8BCDC4BA5BF45 /* ApproveTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEE486F5D031F0B90F295DC3 /* ApproveTableView.swift */; };
 		EEE48E6B90921454B5F56134 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEE48F3B32275CD0897522B1 /* ProfileViewController.swift */; };
+		EEE48E7AFA8D6166129D46FC /* SchoolTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEE48175452CC5488363EF9A /* SchoolTableView.swift */; };
 		EEE48EA7CBD96D118B599277 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEE484EF371DA9CE78EBA476 /* User.swift */; };
 		EEE48EC958750653728CB813 /* BaseTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEE48F62189F01C4EB1C7146 /* BaseTextField.swift */; };
 		EEE48F92F1B39837FBFED5B7 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEE48D145546AC0E66604B8C /* SignUpViewController.swift */; };
@@ -67,6 +72,7 @@
 		EEE48123866D452C2346DC65 /* UserRepositoryMock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserRepositoryMock.swift; sourceTree = "<group>"; };
 		EEE4812ACD89A0BC0547E98E /* BaseScreenView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseScreenView.swift; sourceTree = "<group>"; };
 		EEE4816F4CBF7CE5707653C0 /* SignUpViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewModel.swift; sourceTree = "<group>"; };
+		EEE48175452CC5488363EF9A /* SchoolTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SchoolTableView.swift; sourceTree = "<group>"; };
 		EEE48177D046255812CFB0B0 /* ApproveTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApproveTableViewCell.swift; sourceTree = "<group>"; };
 		EEE481BA9FB39F1C0D6DBB17 /* Subject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Subject.swift; sourceTree = "<group>"; };
 		EEE481D199A1004DF104D365 /* Colors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
@@ -76,6 +82,7 @@
 		EEE48277A0F3AB0157B38700 /* SignUpScreenView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpScreenView.swift; sourceTree = "<group>"; };
 		EEE48284C42DF699727EB577 /* SubjectHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SubjectHeaderView.swift; sourceTree = "<group>"; };
 		EEE482F93670317FDF432196 /* Grade.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Grade.swift; sourceTree = "<group>"; };
+		EEE48327BFE7A14054182A46 /* SchoolScreenView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SchoolScreenView.swift; sourceTree = "<group>"; };
 		EEE483D539495AAA305B2A80 /* FormatterMask.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FormatterMask.swift; sourceTree = "<group>"; };
 		EEE483DCF4581FCC03AAB84C /* BaseView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
 		EEE4841C0DC8C4B4F03A8A98 /* GradeFormView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GradeFormView.swift; sourceTree = "<group>"; };
@@ -90,8 +97,11 @@
 		EEE487C2031D14E49CF6F79D /* SubjectViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SubjectViewController.swift; sourceTree = "<group>"; };
 		EEE487CB4C52FCF5EF52A853 /* SchoolViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SchoolViewController.swift; sourceTree = "<group>"; };
 		EEE4881C12DEA017BA91CDB4 /* LoginScreenView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginScreenView.swift; sourceTree = "<group>"; };
+		EEE4882D47DBC8C00148E462 /* SchoolTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SchoolTableViewCell.swift; sourceTree = "<group>"; };
 		EEE488356110BCCA5BA16310 /* SignUpFormView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpFormView.swift; sourceTree = "<group>"; };
 		EEE488D1B9948F90422A085F /* SignUpLoginFormView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpLoginFormView.swift; sourceTree = "<group>"; };
+		EEE48912539B80E0FEC448AB /* BaseNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseNavigationController.swift; sourceTree = "<group>"; };
+		EEE48917EBB731BD656DC2FE /* SchoolFormView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SchoolFormView.swift; sourceTree = "<group>"; };
 		EEE4894DEB4503FC5112CBD1 /* LoginFormView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginFormView.swift; sourceTree = "<group>"; };
 		EEE4896233DC133CF15A90DC /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		EEE4896924959F8BA48EBCF8 /* ApproveViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApproveViewModel.swift; sourceTree = "<group>"; };
@@ -138,6 +148,17 @@
 				EEE48716C82ACBC475D7683E /* SignUpForm */,
 			);
 			path = SignUp;
+			sourceTree = "<group>";
+		};
+		EEE48122E4F1F49B6F3115EB /* School */ = {
+			isa = PBXGroup;
+			children = (
+				EEE48327BFE7A14054182A46 /* SchoolScreenView.swift */,
+				EEE48917EBB731BD656DC2FE /* SchoolFormView.swift */,
+				EEE48175452CC5488363EF9A /* SchoolTableView.swift */,
+				EEE4882D47DBC8C00148E462 /* SchoolTableViewCell.swift */,
+			);
+			path = School;
 			sourceTree = "<group>";
 		};
 		EEE48157E6F478FE731CB071 /* Resources */ = {
@@ -257,6 +278,7 @@
 				EEE487A76EEE4C256A105C84 /* Subjects */,
 				EEE48954755ED9D1FA3F0ECC /* Grade */,
 				EEE48E18C8F837E28FC6E893 /* Approve */,
+				EEE48122E4F1F49B6F3115EB /* School */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -324,6 +346,7 @@
 				EEE48F62189F01C4EB1C7146 /* BaseTextField.swift */,
 				EEE483DCF4581FCC03AAB84C /* BaseView.swift */,
 				EEE487948A453CF00CA3BD1C /* BaseTabViewController.swift */,
+				EEE48912539B80E0FEC448AB /* BaseNavigationController.swift */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -458,6 +481,11 @@
 				EEE485C21806182BB4CB374F /* GradeViewModel.swift in Sources */,
 				EEE486E754F701043B662647 /* SchoolViewController.swift in Sources */,
 				EEE481872BBB6419B99A5A4D /* SchoolViewModel.swift in Sources */,
+				EEE484B8A8AF44B3C41070D6 /* SchoolScreenView.swift in Sources */,
+				EEE48075EB202E5D0B677F54 /* SchoolFormView.swift in Sources */,
+				EEE48E7AFA8D6166129D46FC /* SchoolTableView.swift in Sources */,
+				EEE48447B48A3C844F7AC40B /* SchoolTableViewCell.swift in Sources */,
+				EEE4885FCAC8E0B5F658A7FE /* BaseNavigationController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

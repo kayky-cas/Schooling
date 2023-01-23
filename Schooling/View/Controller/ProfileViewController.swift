@@ -20,11 +20,19 @@ class ProfileViewController: BaseViewController {
         super.viewDidLoad()
 
         profileScreenView.user = authProvider.getUser()
+        profileScreenView.logout = logout
 
         if authProvider.getUser()?.role == .teacher {
             profileViewModel.getTeacherSubject(subjectId: authProvider.getUser()!.subject_id!) {
                 self.profileScreenView.subject = $0
             }
         }
+    }
+
+    func logout() {
+        authProvider.logout()
+
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        appDelegate.window?.rootViewController = BaseNavigationController()
     }
 }

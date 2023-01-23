@@ -33,7 +33,7 @@ class BaseTabViewController: UITabBarController {
                 break
             case .admin:
                 viewControllers?.append(generateNavController(controller: ApproveViewController(), title: "Aprovar", image: UIImage(systemName: "checkmark")))
-                viewControllers?.append(generateNavController(controller: SubjectViewController(), title: "Escolas", image: UIImage(systemName: "building.2.fill")))
+                viewControllers?.append(generateNavController(controller: SchoolViewController(), title: "Escolas", image: UIImage(systemName: "building.2.fill")))
                 break
             }
         }

@@ -7,17 +7,15 @@ import UIKit
 class SignUpSchoolFormView: BaseView {
     var isValid: Bool = false
 
+    var changeSchool: (School) -> Void = { _ in
+    }
+
     var inputChange: () -> Void = {
     }
 
-//    lazy var schoolLabel: UILabel = {
-//        let uiLabel = UILabel()
-//
-//        uiLabel.text = "Nome da Escola: "
-//        uiLabel.textColor = .systemGray3
-//
-//        return uiLabel
-//    }()
+    var subject: Subject?
+    var school: School?
+    var role: Role = .student
 
     lazy var schoolOptionButton: UIButton = {
         let uiButton = UIButton(configuration: .borderless())
@@ -58,6 +56,17 @@ class SignUpSchoolFormView: BaseView {
         return uiLabel
     }()
 
+    lazy var subjectOptionButton: UIButton = {
+        let uiButton = UIButton(configuration: .borderless())
+
+        uiButton.setTitle("Matéria", for: .normal)
+        uiButton.showsMenuAsPrimaryAction = true
+
+        uiButton.isHidden = true
+
+        return uiButton
+    }()
+
     override func setup() {
 
         addSubviews(
@@ -65,25 +74,17 @@ class SignUpSchoolFormView: BaseView {
                 schoolOptionButton,
                 studentLabel,
                 teacherLabel,
-                roleSwitch
+                roleSwitch,
+                subjectOptionButton
         )
     }
 
     override func setupConstraints() {
         schoolOptionButton.anchor(
                 top: topAnchor
-//                padding: .init(top: 0, left: 0, bottom: 0, right: 0
         )
 
         schoolOptionButton.anchorCenterX(to: centerXAnchor)
-
-//        schoolLabel.anchor(
-//                leading: leadingAnchor
-//        )
-//
-//        schoolLabel.anchorCenterY(to: schoolOptionButton.centerYAnchor)
-
-//        schoolOptionButton.leadingAnchor.constraint(equalTo: schoolLabel.trailingAnchor).isActive = true
 
         roleSwitch.anchor(
                 top: schoolOptionButton.bottomAnchor,
@@ -105,20 +106,54 @@ class SignUpSchoolFormView: BaseView {
                 leading: roleSwitch.trailingAnchor,
                 padding: .init(top: 0, left: 15, bottom: 0, right: 0)
         )
+
+        subjectOptionButton.anchor(
+                top: teacherLabel.bottomAnchor,
+                padding: .init(top: 10, left: 0, bottom: 0, right: 0)
+        )
+
+        subjectOptionButton.anchorCenterX(to: centerXAnchor)
     }
 
-    func setSchools(schools: [String]) {
-        schoolOptionButton.menu = UIMenu(children: schools.map({
-            UIAction(title: $0, image: UIImage(systemName: "books.vertical")) { action in
+    func setSchools(schools: [School]) {
+        schoolOptionButton.menu = UIMenu(children: schools.map({ school in
+            UIAction(title: school.name, image: UIImage(systemName: "books.vertical")) { action in
                 self.schoolOptionButton.setTitle(action.title, for: .normal)
-                self.isValid = true
-                self.inputChange()
+                self.school = school
+                self.changeSchool(school)
+                self.verifyValidation()
+            }
+        }))
+    }
+
+    func setSubjects(subjects: [Subject]) {
+        subjectOptionButton.menu = UIMenu(children: subjects.map({ subject in
+            UIAction(title: subject.name, image: UIImage(systemName: "book")) { action in
+                self.subjectOptionButton.setTitle(action.title, for: .normal)
+                self.subject = subject
+                self.verifyValidation()
             }
         }))
     }
 
     @objc func switchValueDidChange() {
+        subjectOptionButton.isHidden = !roleSwitch.isOn
+
+        role = roleSwitch.isOn ? .teacher : .student
+
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         appDelegate.window!.tintColor = roleSwitch.isOn ? TEACHER_COLOR : STUDENT_COLOR
+
+        verifyValidation()
+    }
+
+    func verifyValidation() {
+        isValid = school != nil
+
+        if roleSwitch.isOn {
+            isValid = isValid && subject != nil
+        }
+
+        inputChange()
     }
 }

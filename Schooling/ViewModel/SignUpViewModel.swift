@@ -5,13 +5,19 @@
 import Foundation
 
 class SignUpViewModel {
+    let userRepository = UserRepositoryMock.shared
     let schoolRepository = SchoolRepositoryMock.shared
+    let subjectRepository = SubjectRepositoryMock.shared
 
-    func getSchoolsName(completion: @escaping ([String]) -> Void) {
+    func getSchoolsAndSubjects(completion: @escaping ([School], [Subject]) -> Void) {
         schoolRepository.getSchools { schools in
-            completion(schools.map {
-                $0.name
-            })
+            self.subjectRepository.getSubjects { subjects in
+                completion(schools, subjects)
+            }
         }
+    }
+
+    func addUser(user: User, completion: @escaping () -> Void) {
+        userRepository.addUser(user: user, completion: completion)
     }
 }

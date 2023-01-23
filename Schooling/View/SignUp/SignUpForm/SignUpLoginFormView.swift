@@ -16,14 +16,20 @@ class SignUpLoginFormView: BaseView {
         }
     }
 
-    lazy var emailTextField: BaseTextField = {
+    var domain: String? {
+        didSet {
+            userNameAddDomain()
+        }
+    }
+
+    lazy var usernameTextField: BaseTextField = {
         let baseTextView = BaseTextField()
 
-        baseTextView.placeholder = "Endereço de Email"
+        baseTextView.placeholder = "Nome de Usuário"
         baseTextView.keyboardType = .emailAddress
         baseTextView.autocapitalizationType = .none
 
-        baseTextView.addTarget(self, action: #selector(textFieldChange), for: .editingChanged)
+        baseTextView.addTarget(self, action: #selector(userNameAddDomain), for: .editingChanged)
 
         return baseTextView
     }()
@@ -52,7 +58,7 @@ class SignUpLoginFormView: BaseView {
 
     override func setup() {
         addSubviews(
-                emailTextField,
+                usernameTextField,
                 passwordTextField,
                 confirmPasswordTextField
         )
@@ -60,29 +66,60 @@ class SignUpLoginFormView: BaseView {
 
     override func setupConstraints() {
 
-        emailTextField.anchor(
+        usernameTextField.anchor(
                 top: topAnchor,
                 leading: leadingAnchor,
                 trailing: trailingAnchor
         )
 
         passwordTextField.anchor(
-                top: emailTextField.bottomAnchor,
+                top: usernameTextField.bottomAnchor,
                 leading: leadingAnchor,
                 trailing: centerXAnchor,
                 padding: .init(top: 10, left: 0, bottom: 0, right: 2.5)
         )
 
         confirmPasswordTextField.anchor(
-                top: emailTextField.bottomAnchor,
+                top: usernameTextField.bottomAnchor,
                 leading: centerXAnchor,
                 trailing: trailingAnchor,
                 padding: .init(top: 10, left: 2.5, bottom: 0, right: 0)
         )
     }
 
+    @objc func userNameAddDomain() {
+        if let text = usernameTextField.text {
+            if text.prefix(1) == "@" {
+                return
+            }
+
+            let usernameSplit = text.split(separator: "@")
+
+            if usernameSplit.count < 1 {
+                return;
+            }
+
+            var username = usernameSplit[0]
+
+            let arbitraryValue: Int = username.count
+
+            if let domain = domain {
+                username = username + "@" + domain
+            }
+
+            if let newPosition = usernameTextField.position(from: usernameTextField.beginningOfDocument, offset: arbitraryValue) {
+
+                usernameTextField.selectedTextRange = usernameTextField.textRange(from: newPosition, to: newPosition)
+            }
+
+            usernameTextField.text = "\(username)"
+        }
+
+        textFieldChange()
+    }
+
     @objc func textFieldChange() {
-        isValid = emailTextField.text ?? "" != "" &&
+        isValid = usernameTextField.text ?? "" != "" &&
                 passwordTextField.text ?? "" != "" &&
                 passwordTextField.text == confirmPasswordTextField.text
 

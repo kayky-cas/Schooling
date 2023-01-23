@@ -23,4 +23,8 @@ class AuthProvider {
     func isLogged() -> Bool {
         user != nil
     }
+
+    func logout() {
+        user = nil
+    }
 }

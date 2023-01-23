@@ -11,6 +11,8 @@ class UserRepositoryMock {
         users[1].subject_id = SubjectRepositoryMock.shared.subjects[1].id
 
         users[0].is_open = true
+        users[5].is_open = true
+        users[1].is_open = true
 
         for x in 0..<users.count {
             if users[x].role != .admin {
@@ -31,6 +33,13 @@ class UserRepositoryMock {
     func getUsers(completion: @escaping ([User]) -> Void) {
         DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
             completion(self.users)
+        }
+    }
+
+    func addUser(user: User, completion: @escaping () -> Void) {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+            self.users.append(user)
+            completion()
         }
     }
 }

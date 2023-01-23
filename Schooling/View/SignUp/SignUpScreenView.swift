@@ -5,6 +5,9 @@
 import UIKit
 
 class SignUpScreenView: BaseScreenView {
+    var createUser: (User) -> Void = { _ in
+    }
+
     lazy var signUpLogo: UIImageView = {
         let uiImageView = UIImageView()
 
@@ -33,13 +36,23 @@ class SignUpScreenView: BaseScreenView {
         uiButton.setTitle("Enviar solicitação", for: .normal)
         uiButton.isEnabled = false
 
+        uiButton.addTarget(self, action: #selector(touchUpInside), for: .touchUpInside)
+
         return uiButton
     }()
 
-    var schools: [String]? {
+    var schools: [School]? {
         didSet {
             if let schools = schools {
                 signUpFormView.schools = schools
+            }
+        }
+    }
+
+    var subjects: [Subject]? {
+        didSet {
+            if let subjects = subjects {
+                signUpFormView.subjects = subjects
             }
         }
     }
@@ -85,5 +98,25 @@ class SignUpScreenView: BaseScreenView {
                 trailing: safeAreaLayoutGuide.trailingAnchor,
                 padding: .init(top: 50, left: 20, bottom: 0, right: 20)
         )
+    }
+
+    @objc func touchUpInside() {
+        let username = signUpFormView.signUpLoginFormView.usernameTextField.text!.split(separator: "@")[0]
+
+        var user = User(
+                name: signUpFormView.signUpUserFormView.nameTextField.text!,
+                cpf: signUpFormView.signUpUserFormView.cpfTextField.text!,
+                username: "\(username)",
+                password: signUpFormView.signUpLoginFormView.passwordTextField.text!,
+                role: signUpFormView.signUpSchoolFormView.role
+        )
+
+        if user.role == .teacher {
+            user.subject_id = signUpFormView.signUpSchoolFormView.subject?.id
+        }
+
+        user.school_id = signUpFormView.signUpSchoolFormView.school?.id
+
+        createUser(user)
     }
 }
