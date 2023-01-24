@@ -30,13 +30,13 @@ class GradeRepositoryMock {
     }
 
     func getGrades(completion: @escaping ([Grade]) -> Void) {
-        DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
             completion(self.grades)
         }
     }
 
     func addGrades(grade: Grade, completion: @escaping () -> Void) {
-        DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
             self.grades.append(grade)
             completion()
         }

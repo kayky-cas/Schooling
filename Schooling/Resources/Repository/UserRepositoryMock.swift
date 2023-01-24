@@ -10,9 +10,9 @@ class UserRepositoryMock {
     private init() {
         users[1].subject_id = SubjectRepositoryMock.shared.subjects[1].id
 
+        users[1].is_open = true
         users[0].is_open = true
         users[5].is_open = true
-        users[1].is_open = true
 
         for x in 0..<users.count {
             if users[x].role != .admin {
@@ -28,16 +28,19 @@ class UserRepositoryMock {
         .init(name: "Mariana Diniz", cpf: "000.000.000-03", username: "mariana.diniz", password: "12345", role: .student),
         .init(name: "Lucas Parolin", cpf: "000.000.000-04", username: "lucas.parolin", password: "12345", role: .student),
         .init(name: "Petry", cpf: "000.000.000-05", username: "petry", password: "12345", role: .admin),
+        .init(name: "Liliana", cpf: "000.000.000-06", username: "liliana", password: "12345", role: .student),
+        .init(name: "Luccas Pedrollo", cpf: "000.000.000-07", username: "luccas.pedrollo", password: "12345", role: .student),
+        .init(name: "Pablo Benner", cpf: "000.000.000-08", username: "pablo.benner", password: "12345", role: .student),
     ]
 
     func getUsers(completion: @escaping ([User]) -> Void) {
-        DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.6) {
             completion(self.users)
         }
     }
 
     func addUser(user: User, completion: @escaping () -> Void) {
-        DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
             self.users.append(user)
             completion()
         }

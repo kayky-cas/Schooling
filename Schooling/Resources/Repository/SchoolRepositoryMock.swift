@@ -16,13 +16,13 @@ class SchoolRepositoryMock {
     ]
 
     func getSchools(completion: @escaping ([School]) -> Void) {
-        DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
             completion(self.schools)
         }
     }
 
     func addSchools(school: School, completion: @escaping () -> Void) {
-        DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
             self.schools.append(school)
             completion()
         }
