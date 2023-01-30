@@ -8,7 +8,7 @@ class UserRepositoryMock {
     static let shared = UserRepositoryMock()
 
     private init() {
-        users[1].subject_id = SubjectRepositoryMock.shared.subjects[1].id
+        users[1].subjectId = SubjectRepositoryMock.shared.subjects[1].id
 
         users[1].is_open = true
         users[0].is_open = true
@@ -16,7 +16,7 @@ class UserRepositoryMock {
 
         for x in 0..<users.count {
             if users[x].role != .admin {
-                users[x].school_id = SchoolRepositoryMock.shared.schools[1].id
+                users[x].schoolId = SchoolRepositoryMock.shared.schools[1].id
             }
         }
     }

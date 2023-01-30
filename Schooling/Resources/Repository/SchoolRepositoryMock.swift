@@ -27,4 +27,13 @@ class SchoolRepositoryMock {
             completion()
         }
     }
+
+    func delete(at index: Int, completion: @escaping () -> Void) {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
+            let school = self.schools.remove(at: index)
+            UserRepositoryMock.shared.users.removeAll { user in
+                user.schoolId == school.id
+            }
+        }
+    }
 }

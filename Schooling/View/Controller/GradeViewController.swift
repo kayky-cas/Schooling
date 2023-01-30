@@ -43,11 +43,11 @@ class GradeViewController: BaseViewController {
             let alert = LoadingAlert(title: nil, message: "Adicionando...", preferredStyle: .alert)
             self.present(alert, animated: true)
 
-            self.studentViewModel.getSubjectById(subjectId: self.authProvider.getUser()?.subject_id ?? .init()) { subject in
+            self.studentViewModel.getSubjectById(subjectId: self.authProvider.getUser()?.subjectId ?? .init()) { subject in
                 if let subject = subject {
                     var grade = grade
-                    grade.subject_id = subject.id
-                    grade.user_id = userId
+                    grade.subjectId = subject.id
+                    grade.userId = userId
 
                     self.gradeViewModel.addGrade(grade: grade) {
                         alert.dismiss(animated: true)

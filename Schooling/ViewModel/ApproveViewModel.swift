@@ -13,11 +13,11 @@ class ApproveViewModel {
         userRepository.getUsers { users in
             self.schoolRepository.getSchools { schools in
                 let usersAndSchools = users.filter({ user in
-                            !user.is_open && user.school_id != nil
+                            !user.is_open && user.schoolId != nil
                         })
                         .map { user in
                             (user, schools.first {
-                                $0.id == user.school_id
+                                $0.id == user.schoolId
                             }!)
                         }
 

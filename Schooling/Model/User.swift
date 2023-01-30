@@ -5,22 +5,22 @@
 import Foundation
 
 struct User {
-    let id: UUID
-    let name: String
-    let cpf: String
+    var id: UUID
+    var name: String
+    var cpf: String
 
-    let username: String
-    let password: String
+    var username: String
+    var password: String
 
-    var subject_id: UUID?
+    var subjectId: UUID?
 
-    let role: Role
+    var role: Role
 
-    var school_id: UUID?
+    var schoolId: UUID?
 
     var is_open: Bool
 
-    let register_date: Date
+    var registerDate: Date
 
     init(name: String, cpf: String, username: String, password: String, role: Role) {
         id = .init()
@@ -29,9 +29,9 @@ struct User {
         self.username = username
         self.password = password
         self.role = role
-        school_id = nil
+        schoolId = nil
         is_open = false
-        register_date = Date()
+        registerDate = Date()
     }
 
     init(id: UUID, name: String, cpf: String, username: String, password: String, role: Role, is_open: Bool) {
@@ -41,9 +41,9 @@ struct User {
         self.username = username
         self.password = password
         self.role = role
-        school_id = nil
+        schoolId = nil
         self.is_open = is_open
-        register_date = Date()
+        registerDate = Date()
     }
 }
 

@@ -28,12 +28,12 @@ class StudentViewController: BaseViewController {
         let alert = LoadingAlert(title: nil, message: "Carregando...", preferredStyle: .alert)
         present(alert, animated: true)
 
-        studentViewModel.getSubjectAverageGrades(subjectId: authProvider.getUser()!.subject_id!) {
+        studentViewModel.getSubjectAverageGrades(subjectId: authProvider.getUser()!.subjectId!) {
             self.students = $0.sorted { tuple, tuple2 in
                 tuple.0.name > tuple2.0.name
             }
 
-            self.studentViewModel.getSubjectById(subjectId: self.authProvider.getUser()!.subject_id!) {
+            self.studentViewModel.getSubjectById(subjectId: self.authProvider.getUser()!.subjectId!) {
                 if let subject = $0 {
                     self.subjectName = subject.name
                 }
@@ -101,12 +101,12 @@ extension StudentViewController: UITableViewDelegate, UITableViewDataSource {
         gradeViewController.setContent(subject: user.name, grades: grades, userId: user.id)
 
         gradeViewController.updateTable = {
-            self.studentViewModel.getSubjectAverageGrades(subjectId: self.authProvider.getUser()!.subject_id!) {
+            self.studentViewModel.getSubjectAverageGrades(subjectId: self.authProvider.getUser()!.subjectId!) {
                 self.students = $0.sorted { tuple, tuple2 in
                     tuple.0.name > tuple2.0.name
                 }
 
-                self.studentViewModel.getSubjectById(subjectId: self.authProvider.getUser()!.subject_id!) {
+                self.studentViewModel.getSubjectById(subjectId: self.authProvider.getUser()!.subjectId!) {
                     if let subject = $0 {
                         self.subjectName = subject.name
                     }

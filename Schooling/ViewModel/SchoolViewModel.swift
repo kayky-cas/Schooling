@@ -16,4 +16,10 @@ class SchoolViewModel {
     func addSchools(school: School, completion: @escaping () -> Void) {
         schoolRepository.addSchools(school: school, completion: completion)
     }
+
+    func delete(at index: Int, completion: @escaping () -> Void) {
+        schoolRepository.delete(at: index) {
+            completion()
+        }
+    }
 }

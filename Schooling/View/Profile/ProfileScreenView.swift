@@ -8,6 +8,9 @@ class ProfileScreenView: BaseScreenView {
     var logout: () -> Void = {
     }
 
+    var editProfile: () -> Void = {
+    }
+
     var user: User? {
         didSet {
             if let user = user {
@@ -46,6 +49,16 @@ class ProfileScreenView: BaseScreenView {
         return uiLabel
     }()
 
+    lazy var editButton: UIButton = {
+        let uiButton = UIButton(configuration: .borderless())
+
+        uiButton.setTitle("Editar", for: .normal)
+        uiButton.setImage(UIImage(systemName: "pencil"), for: .normal)
+        uiButton.addTarget(self, action: #selector(editProfileTouchUpInside), for: .touchUpInside)
+
+        return uiButton
+    }()
+
     lazy var roleLabel: UILabel = {
         let uiLabel = UILabel()
 
@@ -64,7 +77,7 @@ class ProfileScreenView: BaseScreenView {
         uiButton.setTitle("Sair", for: .normal)
         uiButton.tintColor = .red
 
-        uiButton.addTarget(self, action: #selector(touchUpInside), for: .touchUpInside)
+        uiButton.addTarget(self, action: #selector(logoutTouchUpInside), for: .touchUpInside)
 
         return uiButton
     }()
@@ -72,6 +85,7 @@ class ProfileScreenView: BaseScreenView {
     override func setup() {
         addSubviews(
                 nameLabel,
+                editButton,
                 roleLabel,
                 cpfLabel,
                 logoutButton
@@ -86,6 +100,12 @@ class ProfileScreenView: BaseScreenView {
                 padding: .init(top: 30, left: 20, bottom: 0, right: 20)
         )
 
+        editButton.anchor(
+                trailing: nameLabel.trailingAnchor
+        )
+
+        editButton.anchorCenterY(to: nameLabel.centerYAnchor)
+
         roleLabel.anchor(
                 top: nameLabel.bottomAnchor,
                 leading: nameLabel.leadingAnchor
@@ -96,6 +116,7 @@ class ProfileScreenView: BaseScreenView {
                 trailing: nameLabel.trailingAnchor
         )
 
+
         logoutButton.anchor(
                 bottom: safeAreaLayoutGuide.bottomAnchor,
                 padding: .init(top: 0, left: 0, bottom: 20, right: 0),
@@ -105,7 +126,11 @@ class ProfileScreenView: BaseScreenView {
         logoutButton.anchorCenterX(to: centerXAnchor)
     }
 
-    @objc func touchUpInside() {
+    @objc func logoutTouchUpInside() {
         logout()
+    }
+
+    @objc func editProfileTouchUpInside() {
+        editProfile()
     }
 }

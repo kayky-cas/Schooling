@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		4D39EE0F2976CC34004B1190 /* Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4D39EE0E2976CC34004B1190 /* Storyboard.storyboard */; };
+		EEE48006A8B34CF08E1C7969 /* EditProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEE483523D3D56F1D096BB4B /* EditProfileViewModel.swift */; };
 		EEE4805D280A05AB4D327941 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEE4896233DC133CF15A90DC /* LoginViewController.swift */; };
 		EEE48075EB202E5D0B677F54 /* SchoolFormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEE48917EBB731BD656DC2FE /* SchoolFormView.swift */; };
 		EEE480E16F85716F2236D436 /* SubjectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEE487C2031D14E49CF6F79D /* SubjectViewController.swift */; };
@@ -47,6 +48,7 @@
 		EEE4881C438EAA3F4858B23E /* StudentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEE48B3E2FBEDE6E4A232EBA /* StudentViewController.swift */; };
 		EEE4885FCAC8E0B5F658A7FE /* BaseNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEE48912539B80E0FEC448AB /* BaseNavigationController.swift */; };
 		EEE488B49439CD747B549BA6 /* GradeRepositoryMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEE48CB9D3D94B549092216E /* GradeRepositoryMock.swift */; };
+		EEE488C0B1A1358EC1C75DDD /* EditProfileScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEE4887E61E23265381DD4CF /* EditProfileScreenView.swift */; };
 		EEE4892C99279E70A00E1433 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEE48DC84C969E376046C8AC /* BaseViewController.swift */; };
 		EEE48A0B35F4133CC8064C6E /* SignUpScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEE48277A0F3AB0157B38700 /* SignUpScreenView.swift */; };
 		EEE48A13DD7FA8EF59602F35 /* StudentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEE489C871734E556F8CA3CE /* StudentViewModel.swift */; };
@@ -62,6 +64,7 @@
 		EEE48E7AFA8D6166129D46FC /* SchoolTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEE48175452CC5488363EF9A /* SchoolTableView.swift */; };
 		EEE48EA7CBD96D118B599277 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEE484EF371DA9CE78EBA476 /* User.swift */; };
 		EEE48EC958750653728CB813 /* BaseTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEE48F62189F01C4EB1C7146 /* BaseTextField.swift */; };
+		EEE48F6AF2CA78BC3FA5EDB3 /* EditProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEE48D1CD85A281C9A7FD021 /* EditProfileViewController.swift */; };
 		EEE48F92F1B39837FBFED5B7 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEE48D145546AC0E66604B8C /* SignUpViewController.swift */; };
 		EEE48FC8CBC96147B0E9AC0D /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEE481D8E678763DE81B9766 /* ProfileViewModel.swift */; };
 		EEE48FCFCBE7A0DE1BD7F128 /* SignUpUserFormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEE489A48EB934B463874B63 /* SignUpUserFormView.swift */; };
@@ -83,6 +86,7 @@
 		EEE48284C42DF699727EB577 /* SubjectHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SubjectHeaderView.swift; sourceTree = "<group>"; };
 		EEE482F93670317FDF432196 /* Grade.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Grade.swift; sourceTree = "<group>"; };
 		EEE48327BFE7A14054182A46 /* SchoolScreenView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SchoolScreenView.swift; sourceTree = "<group>"; };
+		EEE483523D3D56F1D096BB4B /* EditProfileViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditProfileViewModel.swift; sourceTree = "<group>"; };
 		EEE483D539495AAA305B2A80 /* FormatterMask.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FormatterMask.swift; sourceTree = "<group>"; };
 		EEE483DCF4581FCC03AAB84C /* BaseView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
 		EEE4841C0DC8C4B4F03A8A98 /* GradeFormView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GradeFormView.swift; sourceTree = "<group>"; };
@@ -99,6 +103,7 @@
 		EEE4881C12DEA017BA91CDB4 /* LoginScreenView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginScreenView.swift; sourceTree = "<group>"; };
 		EEE4882D47DBC8C00148E462 /* SchoolTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SchoolTableViewCell.swift; sourceTree = "<group>"; };
 		EEE488356110BCCA5BA16310 /* SignUpFormView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpFormView.swift; sourceTree = "<group>"; };
+		EEE4887E61E23265381DD4CF /* EditProfileScreenView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditProfileScreenView.swift; sourceTree = "<group>"; };
 		EEE488D1B9948F90422A085F /* SignUpLoginFormView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpLoginFormView.swift; sourceTree = "<group>"; };
 		EEE48912539B80E0FEC448AB /* BaseNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseNavigationController.swift; sourceTree = "<group>"; };
 		EEE48917EBB731BD656DC2FE /* SchoolFormView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SchoolFormView.swift; sourceTree = "<group>"; };
@@ -117,6 +122,7 @@
 		EEE48C0B659E76FCAC4801C6 /* GradeTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GradeTableView.swift; sourceTree = "<group>"; };
 		EEE48CB9D3D94B549092216E /* GradeRepositoryMock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GradeRepositoryMock.swift; sourceTree = "<group>"; };
 		EEE48D145546AC0E66604B8C /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		EEE48D1CD85A281C9A7FD021 /* EditProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditProfileViewController.swift; sourceTree = "<group>"; };
 		EEE48D2CFDE8DD03CE9B0013 /* UIView+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
 		EEE48D4003F2891CE216ABAC /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EEE48DC84C969E376046C8AC /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
@@ -226,6 +232,7 @@
 				EEE48B3E2FBEDE6E4A232EBA /* StudentViewController.swift */,
 				EEE486359C8A5B37C67599E5 /* ApproveViewController.swift */,
 				EEE487CB4C52FCF5EF52A853 /* SchoolViewController.swift */,
+				EEE48D1CD85A281C9A7FD021 /* EditProfileViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -279,6 +286,7 @@
 				EEE48954755ED9D1FA3F0ECC /* Grade */,
 				EEE48E18C8F837E28FC6E893 /* Approve */,
 				EEE48122E4F1F49B6F3115EB /* School */,
+				EEE48F6D67BAB0AFD782DAD5 /* EditProfile */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -325,6 +333,7 @@
 				EEE4896924959F8BA48EBCF8 /* ApproveViewModel.swift */,
 				EEE489BBDD7AC859C0F73A8C /* GradeViewModel.swift */,
 				EEE48BDA994D1A4DE61321AD /* SchoolViewModel.swift */,
+				EEE483523D3D56F1D096BB4B /* EditProfileViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -349,6 +358,14 @@
 				EEE48912539B80E0FEC448AB /* BaseNavigationController.swift */,
 			);
 			path = Base;
+			sourceTree = "<group>";
+		};
+		EEE48F6D67BAB0AFD782DAD5 /* EditProfile */ = {
+			isa = PBXGroup;
+			children = (
+				EEE4887E61E23265381DD4CF /* EditProfileScreenView.swift */,
+			);
+			path = EditProfile;
 			sourceTree = "<group>";
 		};
 		EEE48F9E63D1F55DBFE72E57 = {
@@ -486,6 +503,9 @@
 				EEE48E7AFA8D6166129D46FC /* SchoolTableView.swift in Sources */,
 				EEE48447B48A3C844F7AC40B /* SchoolTableViewCell.swift in Sources */,
 				EEE4885FCAC8E0B5F658A7FE /* BaseNavigationController.swift in Sources */,
+				EEE48F6AF2CA78BC3FA5EDB3 /* EditProfileViewController.swift in Sources */,
+				EEE488C0B1A1358EC1C75DDD /* EditProfileScreenView.swift in Sources */,
+				EEE48006A8B34CF08E1C7969 /* EditProfileViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

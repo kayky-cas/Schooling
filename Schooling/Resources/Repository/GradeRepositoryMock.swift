@@ -22,8 +22,8 @@ class GradeRepositoryMock {
                     value: Double.random(in: 0...10)
             )
 
-            grade.user_id = UserRepositoryMock.shared.users[0].id
-            grade.subject_id = SubjectRepositoryMock.shared.subjects[Int.random(in: 0..<SubjectRepositoryMock.shared.subjects.count)].id
+            grade.userId = UserRepositoryMock.shared.users[0].id
+            grade.subjectId = SubjectRepositoryMock.shared.subjects[Int.random(in: 0..<SubjectRepositoryMock.shared.subjects.count)].id
 
             grades.append(grade)
         }

@@ -51,6 +51,12 @@ class SignUpUserFormView: BaseView {
         )
     }
 
+    func setUser(user: User) {
+        nameTextField.text = user.name
+        cpfTextField.text = user.cpf
+    }
+
+
     @objc func textFieldChange() {
         isValid = nameTextField.text ?? "" != ""
         inputChange()

@@ -87,6 +87,11 @@ class SignUpLoginFormView: BaseView {
         )
     }
 
+    func setUser(user: User) {
+        usernameTextField.text = user.username
+        passwordTextField.placeholder = "Nova senha"
+    }
+
     @objc func userNameAddDomain() {
         if let text = usernameTextField.text {
             if text.prefix(1) == "@" {

@@ -27,7 +27,7 @@ class StudentViewModel {
                         }
                         .map { user in
                             let subGrades = grades.filter {
-                                $0.user_id == user.id && $0.subject_id == subjectId
+                                $0.userId == user.id && $0.subjectId == subjectId
                             }
 
                             return (user, subGrades)

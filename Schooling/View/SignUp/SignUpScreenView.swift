@@ -112,10 +112,10 @@ class SignUpScreenView: BaseScreenView {
         )
 
         if user.role == .teacher {
-            user.subject_id = signUpFormView.signUpSchoolFormView.subject?.id
+            user.subjectId = signUpFormView.signUpSchoolFormView.subject?.id
         }
 
-        user.school_id = signUpFormView.signUpSchoolFormView.school?.id
+        user.schoolId = signUpFormView.signUpSchoolFormView.school?.id
 
         createUser(user)
     }

@@ -18,15 +18,11 @@ class ProfileViewController: BaseViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+    }
 
-        profileScreenView.user = authProvider.getUser()
-        profileScreenView.logout = logout
-
-        if authProvider.getUser()?.role == .teacher {
-            profileViewModel.getTeacherSubject(subjectId: authProvider.getUser()!.subject_id!) {
-                self.profileScreenView.subject = $0
-            }
-        }
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        configScreenView()
     }
 
     func logout() {
@@ -34,5 +30,25 @@ class ProfileViewController: BaseViewController {
 
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         appDelegate.window?.rootViewController = BaseNavigationController()
+    }
+
+    func editProfile() {
+        let editProfileViewController = EditProfileViewController()
+
+        editProfileViewController.setUser(user: authProvider.getUser()!)
+
+        navigationController?.pushViewController(editProfileViewController, animated: true)
+    }
+
+    func configScreenView() {
+        profileScreenView.user = authProvider.getUser()
+        profileScreenView.logout = logout
+        profileScreenView.editProfile = editProfile
+
+        if authProvider.getUser()?.role == .teacher {
+            profileViewModel.getTeacherSubject(subjectId: authProvider.getUser()!.subjectId!) {
+                self.profileScreenView.subject = $0
+            }
+        }
     }
 }

@@ -78,4 +78,15 @@ extension SchoolViewController: UITableViewDelegate, UITableViewDataSource {
 
         return cell
     }
+
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            schools.remove(at: indexPath.item)
+
+            schoolScreenView.schoolTableView.deleteRows(at: [indexPath], with: .automatic)
+
+            schoolViewModel.delete(at: indexPath.item) {
+            }
+        }
+    }
 }
